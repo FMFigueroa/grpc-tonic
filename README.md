@@ -98,5 +98,4 @@ returns:
 }
 ```
 
-<p align="justify">If you now inspect the Autometrics explorer on `http://localhost:6789` you will see your metrics.</p>
-
+If you now inspect the Autometrics explorer on `http://localhost:6789` you will see your metrics.
