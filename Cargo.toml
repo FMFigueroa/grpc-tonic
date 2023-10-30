@@ -1,7 +1,19 @@
 [package]
 name = "grpc-tonic"
+autor = "felix figueroa"
+email = "felixmanuelfigueroa@gmail"
 version = "0.1.0"
 edition = "2021"
+
+# cargo run --bin helloworld-server 
+[[bin]] # Bin to run the HelloWorld gRPC server
+name = "helloworld-server"
+path = "src/helloworld/server.rs"
+
+# cargo run --bin helloworld-client 
+[[bin]] # Bin to run the HelloWorld gRPC client
+name = "helloworld-client"
+path = "src/helloworld/client.rs"
 
 # cargo run --bin job-server 
 [[bin]] # Bin to run the HelloWorld gRPC server
