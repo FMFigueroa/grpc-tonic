@@ -6,11 +6,13 @@ service JobRunner {
     rpc ListJobs (Empty) returns (JobList);
 }
 
-message Empty {}
-
-message Job {
-    int32 id = 1;
-    string name = 2;
+//==== SendJob =======
+message JobRequest {
+    string name = 1;
+ }
+ 
+message JobReply {
+    string message = 1;
 
     enum Status {
         NOT_STARTED = 0;
@@ -19,12 +21,12 @@ message Job {
     }
 }
 
-message JobRequest {
-   string name = 1;
-}
+//==== ListJobs =======
+message Empty {}
 
-message JobReply {
-    string message = 1;
+message Job {
+    int32 id = 1;
+    string name = 2;
 
     enum Status {
         NOT_STARTED = 0;
