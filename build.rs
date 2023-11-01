@@ -19,5 +19,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             // specify the root location to search proto dependencies
         )?;
 
+    tonic_build::configure()
+        .type_attribute("routeguide.Point", "#[derive(Hash)]")
+        .compile(&["proto/streaming/streaming.proto"], &["proto"])?;
+
     Ok(())
 }
